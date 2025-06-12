@@ -36,7 +36,9 @@ int main(int argc, char **argv, char **env)
 		i = 0;
 		while (argv[i] && strcmp(argv[i], "|") && strcmp(argv[i], ";"))
 			i++;
-
+		if (i == 0)
+			continue;
+		
 		if (strcmp(argv[0], "cd") == 0)
 		{
 			if (i != 2)
